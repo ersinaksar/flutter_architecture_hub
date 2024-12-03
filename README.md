@@ -1,16 +1,16 @@
-# flutter_high_level_project_structure
+# Project Documentation
 
-A new Flutter project.
+🌐 [Türkçe](README-TR.md) | [中文](README-CN.md)
 
-## Getting Started
+This project follows Clean Architecture principles and uses Flutter.
 
-This project is a starting point for a Flutter application.
+## File Structure
+- **lib/app/**: Global configurations, routes, and the root widget.
+- **lib/core/**: Common providers, helpers, and constants.
+- **lib/features/**: Features or modules divided into layers.
+- **lib/main.dart**: Entry point of the application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+For detailed explanations, refer to:
+- [Clean Architecture](docs/architecture.md)
+- [Riverpod Usage](docs/riverpod_usage.md)
+- [Firebase Integration](docs/firebase_integration.md)
