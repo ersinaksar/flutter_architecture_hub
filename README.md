@@ -1,6 +1,10 @@
-# Flutter Clean Architecture Template
+# Flutter Architecture Hub
+
+
+## About This Project
 
 This repository is a Flutter project template implementing **Clean Architecture**, **Riverpod** for state management, and modular design principles. It’s designed for developers looking to create scalable and maintainable applications.
+
 
 ---
 
