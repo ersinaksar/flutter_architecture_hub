@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-import 'config/app_config.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../core/providers/app_config_provider.dart';
 import 'navigation/app_router.dart';
 
-class StructureApp extends StatelessWidget {
+class StructureApp extends ConsumerWidget {
   const StructureApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final appConfig = ref.watch(appConfigProvider);
     return MaterialApp.router(
-      title: AppConfig.appName,
-      theme: AppConfig.themeData,
+      title: appConfig.appName,
+      theme: appConfig.themeData,
       routerConfig: appRouter,
     );
   }
