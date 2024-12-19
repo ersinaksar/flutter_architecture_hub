@@ -1,13 +1,9 @@
 class Counter {
   final int value;
-  final int incrementValue;
 
-  Counter({required this.value, required this.incrementValue});
+  Counter(this.value);
 
-  Counter copyWith({int? value, int? incrementValue}) {
-    return Counter(
-      value: value ?? this.value,
-      incrementValue: incrementValue ?? this.incrementValue,
-    );
+  Counter increment([int incrementBy = 1]) {
+    return Counter(value + incrementBy);
   }
 }

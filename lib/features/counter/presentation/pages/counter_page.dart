@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/providers/app_config_provider.dart';
 import '../../application/counter_notifier.dart';
+import '../widgets/bottom_navigation_bar.dart';
 
 class CounterPage extends ConsumerWidget {
   const CounterPage({Key? key}) : super(key: key);
@@ -9,10 +11,11 @@ class CounterPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final counter = ref.watch(counterProvider);
+    final appConfig = ref.watch(appConfigProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Structure App counter'),
+        title: Text(appConfig.appName),
       ),
       body: Center(
         child: Text(
@@ -25,6 +28,7 @@ class CounterPage extends ConsumerWidget {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
